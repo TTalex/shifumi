@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+    <body>
+        <div style="position: absolute; top: 10px; left: 10px;">
+            Joueur n°<span id="player_id"></span>
+        </div>
+        <div id="scores" style="position: absolute; top: 10px; right: 10px;">
+            J1: 0 | J2: 0
+        </div>
+        <div id="msg">
+
+        </div>
+        <div id="choices_menu">
+            <img id="choice_pierre" src="pierre_grey.png" alt="" onClick="shifumi('pierre')">
+            <img id="choice_feuille" src="feuille_grey.png" alt="" onClick="shifumi('feuille')">
+            <img id="choice_ciseau" src="ciseau_grey.png" alt="" onClick="shifumi('ciseau')">
+        </div>
+        <div class="row" id="animation">
+            <div class="anim_circles" id="shi" style="transform: rotate(45deg);">
+                <div class="text">SHI</div>
+            </div>
+            <div class="anim_circles" id="fu" style="transform: rotate(-45deg);">
+                <div class="text">FU</div>
+            </div>
+            <div class="anim_circles" id="mi">
+                <div class="text">MI!</div>
+            </div>
+        </div>
+        <div id="result">
+
+        </div>
+        <div class="row" id="results">
+
+            <div class="col-xs-12 col-md-5">
+                <h3>Ton choix</h3>
+                <div id="choice1">
+
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-2">
+                <h1>Vs</h1>
+            </div>
+            <div class="col-xs-12  col-md-5">
+                <h3>Son choix</h3>
+                <div id="choice2">
+
+                </div>
+            </div>
+        </div>
+        <button id="replay" type="button" class="btn btn-primary" onClick="replay()">Rejouer</button>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
